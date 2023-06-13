@@ -61,43 +61,50 @@
         <li class="list-group-item">Capteur PPG</li>
         <li>
             <ul class="list-group">
-                <li class="list-group-item">Fonctionnement</li>
-                <li class="list-group-item">Acquisition des données</li>
-                <li class="list-group-item">Analyse des données</li>
+                <li class="list-group-item">&emsp;Fonctionnement</li>
+                <li class="list-group-item">&emsp;Acquisition des données</li>
+                <li class="list-group-item">&emsp;Analyse des données</li>
             </ul>
         </li>
         <li class="list-group-item">Capteur Galvanic</li>
         <li>
             <ul class="list-group">
-                <li class="list-group-item">Fonctionnement</li>
-                <li class="list-group-item">Acquisition des données</li>
-                <li class="list-group-item">Analyse des données</li>
+                <li class="list-group-item">&emsp;Fonctionnement</li>
+                <li class="list-group-item">&emsp;Acquisition des données</li>
+                <li class="list-group-item">&emsp;Analyse des données</li>
             </ul>
         </li>
-      </ul>
+    </ul>
+
+    <br>
 
     <h4>Capteur PPG</h4>
 
-    <p>Dispositif permettant de mesurer les variations du volume sanguins, permets donc d’obtenir la fréquence cardiaque.
-    Dans le cadre la pixel Watch, le capteur dispose de 2 canaux différents, un premier émettant une lumière verte et un
-    second, une lumière rouge (meilleure précision)</p>
+    <p>Dispositif permettant de mesurer les variations du volume sanguins, permets donc d’obtenir la fréquence
+        cardiaque.
+        Dans le cadre la pixel Watch, le capteur dispose de 2 canaux différents, un premier émettant une lumière verte
+        et un
+        second, une lumière rouge (meilleure précision)</p>
 
     <h5>Fonctionnement</h5>
 
-    <p>Le capteur PPG fonctionne en émettant une lumière à travers la peau, généralement à l'aide de diodes qui émettent de
-    la lumière verte ou rouge. La lumière est absorbée par le sang dans les vaisseaux. Lorsque le cœur bat et le sang
-    circule, le volume de sang dans les vaisseaux change, ce qui modifie l'absorption de la lumière, et nous permet donc
-    de calculer une fréquence cardiaque</p>
+    <p>Le capteur PPG fonctionne en émettant une lumière à travers la peau, généralement à l'aide de diodes qui émettent
+        de
+        la lumière verte ou rouge. La lumière est absorbée par le sang dans les vaisseaux. Lorsque le cœur bat et le
+        sang
+        circule, le volume de sang dans les vaisseaux change, ce qui modifie l'absorption de la lumière, et nous permet
+        donc
+        de calculer une fréquence cardiaque</p>
 
     <h5>Acquisition des données</h5>
 
     <ul>
         <li>
             Fonctionnement avec des listenener
-        </ul>
-        <li>
-            La fréquence d’acquisition ne peut être supérieur à 100Hz
-        </li>
+    </ul>
+    <li>
+        La fréquence d’acquisition ne peut être supérieur à 100Hz
+    </li>
     </ul>
 
     <h5>Analyse des données</h5>
@@ -106,12 +113,53 @@
         le cadre de la Pixel Watch, c’est un tableau de 16 valeurs qui est renvoyé. Sur une montre de marque différente
         (eg. La fossil, uniquement la valeur traité).</p>
 
-        <h4>Catpeur Galvanic</h4>
+    <img scr="./ressources/Image1.png" />
 
-        <h5>Fonctionement</h5>
-        <h5>Acquisition des données</h5>
-        <h5>Analyse des données</h5>
+    <p>Sur les 16 valeurs, on peut émettre différentes hypothèses quant à la signification des valeurs. En effet, Google
+        étant très opaque sur ce sujet, au cours de nombreux test nous avons déduit que chaque colonne pouvait faire
+        référence, au TimeStamp en millisecondes pour la première colonne, au délai d’acquisition pour la seconde (temps
+        depuis la première acquisition), en seconde . On peut également trouver la valeur du capteur de lumière ambiante
+        en 3ème position, qui est assez utile pour le traitement de signal. Les colonnes 6 et 7 devrait correspondre au
+        signal de chaque canal, du fait de leur similarité.</p>
 
+    <p>La valeur permettant d’indiquer le signal traité, du capteur de PPG est la dernière qui n’est pas égale à 0.
+        Elle nous permet d’obtenir le graphique suivant :</p>
+
+
+    <img scr="./ressources/Image2.png" />
+
+    <p>On notera des variations du signal verticale en raison des mouvements de l’invidu portant la montre.</p>
+
+    <h4>Catpeur Galvanic</h4>
+
+    <p>Ce capteur permet de mesure la conductance de la peau, ce qui permet de connaitre l’état de sudation d’un
+        individu, ce qui peut être analysé pour connaitre l’état de stress/d’excitation d’un individu.</p>
+
+    <h5>Fonctionement</h5>
+
+    <p>Deux électrodes sont placées sous la montre, et sont donc en contact avec la peau. On applique à ces dernières
+        une légère tension (insensible pour le porteur), ce qui permet de récupérer la conductance de la peau. Plus
+        l’individu transpire, plus la conductance sera élevée ce qui suite à traitement permettra d’évaluer
+        l’activité/l’état de l’individu. </p>
+
+    <p>NB : Le capteur de réponse galvanique, gagne tout son intérêt lorsqu’il est combiné à d’autre capteurs. En effet,
+        la sudation dépend du contexte, si je suis en train de faire, du sport, ou que je stresse pour un exam, j’aurai
+        la même conductance, mais mon état émotionnel ne sera pas le même.</p>
+    <h5>Acquisition des données</h5>
+
+    <ul>
+        <li>Fonctionnement avec des listener</li>
+        <li>Capture des données impossible en simultanée avec le capteur de PPG</li>
+    </ul>
+
+    <h5>Analyse des données</h5>
+
+    <img scr="./ressources/Image3.png" />
+
+    <p>Dans ce cas-là, prise de donnée sur 6 min dans un état dis de repos, c’est-à-dire sans sudation particulière. On
+        suppose que la valeur renvoyée du capteur est la tension récupérer entre les 2 électrode</p>
+
+    <p>A Venir : effectuer des tests en activités sportives pour comparer les graphique, idem pour le capteur de PPG</p>
 
     <ul class="nav navbar-expand-lg bg-body-tertiary justify-content-center fixed-bottom">
         <li class="nav-item">
