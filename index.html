@@ -29,6 +29,9 @@
         crossorigin="anonymous"></script>
 
     <style>
+        .bold {
+            font-weight: bolder;
+        }
         .code-box {
             background-color: #2b2b2b;
             /* Couleur de fond foncée */
@@ -39,6 +42,12 @@
             /* Couleur du texte clair */
             height: 200px;
             overflow: auto;
+        }
+        .code-header {
+            background-color: #333; /* Couleur de fond de la barre de titre */
+            color: #fff; /* Couleur du texte de la barre de titre */
+            padding: 10px;
+            font-weight: bold;
         }
     </style>
 
@@ -83,10 +92,10 @@
 
                 <ul class="list-group">
                     <a href="#presentation">
-                        <li class="list-group-item">Présentation</li>
+                        <li class="list-group-item bold">Présentation</li>
                     </a>
                     <a href="./ppg.html#ppg">
-                        <li class="list-group-item">Capteur PPG</li>
+                        <li class="list-group-item bold">Capteur PPG</li>
                     </a>
                     <li>
 
@@ -102,7 +111,7 @@
 
                     </li>
                     <a href="./galvanic.html#galvanic">
-                        <li class="list-group-item">Capteur Galvanic</li>
+                        <li class="list-group-item bold">Capteur Galvanic</li>
                     </a>
                     <li>
 
@@ -141,7 +150,9 @@
                     :
                 </p>
 
-
+                <div class="code-header">
+                    <h2>Liste des Capteurs</h2> <!-- Titre de la boîte de code -->
+                </div>
                 <div class="code-box">
                     <pre>
                         <code>
