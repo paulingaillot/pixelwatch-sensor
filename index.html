@@ -58,12 +58,12 @@
 
     <ul class="list-group">
         <h4>Index</h4>
-        <li class="list-group-item">Capteur PPG</li>
+        <a href="#ppg"><li class="list-group-item">Capteur PPG</li></a>
         <li>
             <ul class="list-group">
-                <li class="list-group-item">&emsp;Fonctionnement</li>
-                <li class="list-group-item">&emsp;Acquisition des données</li>
-                <li class="list-group-item">&emsp;Analyse des données</li>
+                <a href="#fonctionnement"><li class="list-group-item">&emsp;Fonctionnement</li></a>
+                <a href="#acquisition"><li class="list-group-item">&emsp;Acquisition des données</li></a>
+                <a href="#analyse"><li class="list-group-item">&emsp;Analyse des données</li></a>
             </ul>
         </li>
         <li class="list-group-item">Capteur Galvanic</li>
@@ -78,7 +78,7 @@
 
     <br>
 
-    <h4>Capteur PPG</h4>
+    <h4 id="ppg">Capteur PPG</h4>
 
     <p>Dispositif permettant de mesurer les variations du volume sanguins, permets donc d’obtenir la fréquence
         cardiaque.
@@ -86,7 +86,7 @@
         et un
         second, une lumière rouge (meilleure précision)</p>
 
-    <h5>Fonctionnement</h5>
+    <h5 id="fonctionnement">Fonctionnement</h5>
 
     <p>Le capteur PPG fonctionne en émettant une lumière à travers la peau, généralement à l'aide de diodes qui émettent
         de
@@ -96,7 +96,7 @@
         donc
         de calculer une fréquence cardiaque</p>
 
-    <h5>Acquisition des données</h5>
+    <h5 id="acquisition">Acquisition des données</h5>
 
     <ul>
         <li>
@@ -107,7 +107,7 @@
     </li>
     </ul>
 
-    <h5>Analyse des données</h5>
+    <h5 id="anaylse">Analyse des données</h5>
 
     <p>Selon le chipset utilisé (AFE4950 de chez Texas Instrument), une ou plusieurs valeurs peuvent être renvoyé. Dans
         le cadre de la Pixel Watch, c’est un tableau de 16 valeurs qui est renvoyé. Sur une montre de marque différente
