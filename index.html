@@ -30,14 +30,15 @@
 
     <style>
         .code-box {
-            background-color: #f1f1f1;
+            background-color: #2b2b2b;
+            /* Couleur de fond foncée */
             padding: 10px;
             border: 1px solid #ccc;
             font-family: monospace;
+            color: #fff;
+            /* Couleur du texte clair */
             height: 200px;
-            /* Hauteur fixe */
             overflow: auto;
-            /* Ajoute une barre de défilement en cas de dépassement */
         }
     </style>
 
@@ -126,13 +127,25 @@
             <div class="col-md-10 offset-md-1">
 
                 <h4>Presentation</h4>
-                <p> ceci est la présentation du projet</p>
+                <p> Dans le cadre de notre session d’été nous avons décider de travailler sur une application Wear OS
+                    permettant de récupérer des données de divers capteurs, pour cela nous avons utilisé une montre
+                    Google Pixel Watch. Le but de ce site web est d’expliquer les capteurs présents sur la montre Google
+                    Pixel Watch et de décrire le fonctionnement de certains capteurs, en particulier le capteur de PPG
+                    et le capteur Galvanic. </p>
+
+                <p>Afin de réaliser notre projet nous avons dans un premier temps effectué une recherche de l’ensemble
+                    des capteurs présents sur la montre Google Pixel Watch. Pour cela nous avons créé et exécuter une
+                    petite application Wear OS permettant de lister dans la console la liste des capteurs présent dans
+                    l’appareil.
+                    Nous pouvons observer ci-dessous la liste des capteurs présent dans la montre que nous avons étudiée
+                    :
+                </p>
 
 
                 <div class="code-box">
                     <pre>
                         <code>
-                            Name: LSM6DSO32 Accelerometer /Type_String: android.sensor.accelerometer /Type_number: 1
+Name: LSM6DSO32 Accelerometer /Type_String: android.sensor.accelerometer /Type_number: 1
 2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Accelerometer (wake-up) /Type_String: android.sensor.accelerometer /Type_number: 1
 2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: LIS2MDL Magnetometer Sensor /Type_String: android.sensor.magnetic_field /Type_number: 2
 2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: LIS2MDL Magnetometer Sensor (wake-up) /Type_String: android.sensor.magnetic_field /Type_number: 2
@@ -201,6 +214,14 @@
                         </code>
                     </pre>
                 </div>
+
+                <p>Dans le cadre de ce rapport, nous allons porter une attention particulière à deux capteurs précis par
+                    la suite :
+                <ul>
+                    <li>Le capteur de PGG : AFE4950 PPG Sensor 65572</li>
+                    <li>Le capteur Galvanic AFE4950 Galvanic Skin Response 65554</li>
+                </ul>
+                </p>
 
             </div>
 
