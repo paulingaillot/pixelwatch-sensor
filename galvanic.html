@@ -59,15 +59,6 @@
     <h2>Acquisition de donnée capteurs d’une Pixel Watch</h2>
 
     <ul class="list-group">
-        <h4>Index</h4>
-        <a href="#ppg"><li class="list-group-item">Capteur PPG</li></a>
-        <li>
-            <ul class="list-group">
-                <a href="#fonctionnement"><li class="list-group-item">&emsp;Fonctionnement</li></a>
-                <a href="#acquisition"><li class="list-group-item">&emsp;Acquisition des données</li></a>
-                <a href="#analyse"><li class="list-group-item">&emsp;Analyse des données</li></a>
-            </ul>
-        </li>
         <li class="list-group-item">Capteur Galvanic</li>
         <li>
             <ul class="list-group">
@@ -80,12 +71,12 @@
 
     <br>
 
-    <h4>Catpeur Galvanic</h4>
+    <h4 id="galvanic">Catpeur Galvanic</h4>
 
     <p>Ce capteur permet de mesure la conductance de la peau, ce qui permet de connaitre l’état de sudation d’un
         individu, ce qui peut être analysé pour connaitre l’état de stress/d’excitation d’un individu.</p>
 
-    <h5>Fonctionement</h5>
+    <h5 id="fonctionnement">Fonctionement</h5>
 
     <p>Deux électrodes sont placées sous la montre, et sont donc en contact avec la peau. On applique à ces dernières
         une légère tension (insensible pour le porteur), ce qui permet de récupérer la conductance de la peau. Plus
@@ -95,14 +86,16 @@
     <p>NB : Le capteur de réponse galvanique, gagne tout son intérêt lorsqu’il est combiné à d’autre capteurs. En effet,
         la sudation dépend du contexte, si je suis en train de faire, du sport, ou que je stresse pour un exam, j’aurai
         la même conductance, mais mon état émotionnel ne sera pas le même.</p>
-    <h5>Acquisition des données</h5>
+
+
+    <h5 id="acquisition">Acquisition des données</h5>
 
     <ul>
         <li>Fonctionnement avec des listener</li>
         <li>Capture des données impossible en simultanée avec le capteur de PPG</li>
     </ul>
 
-    <h5>Analyse des données</h5>
+    <h5 id="analyse">Analyse des données</h5>
 
     <img src="./ressources/Image3.png" />
 
