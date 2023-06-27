@@ -28,6 +28,19 @@
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
 
+    <style>
+        .code-box {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            height: 200px;
+            /* Hauteur fixe */
+            overflow: auto;
+            /* Ajoute une barre de défilement en cas de dépassement */
+        }
+    </style>
+
 </head>
 
 <body id="body1" data-bs-theme="light">
@@ -61,14 +74,16 @@
     </div>
 
     <h2>Acquisition de donnée capteurs d’une Pixel Watch</h2>
-
+    <br>
     <div class="container m-0">
         <div class="row">
-            
+
             <div class="col-md-5 offset-md-2">
 
                 <ul class="list-group">
-                    <h4>Index</h4>
+                    <a href="#presentation">
+                        <li class="list-group-item">Présentation</li>
+                    </a>
                     <a href="./ppg.html#ppg">
                         <li class="list-group-item">Capteur PPG</li>
                     </a>
@@ -105,13 +120,87 @@
             </div>
         </div>
 
-
+        <br>
         <div class="row">
 
             <div class="col-md-10 offset-md-1">
 
                 <h4>Presentation</h4>
                 <p> ceci est la présentation du projet</p>
+
+
+                <div class="code-box">
+                    <pre>
+                        <code>
+                            Name: LSM6DSO32 Accelerometer /Type_String: android.sensor.accelerometer /Type_number: 1
+2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Accelerometer (wake-up) /Type_String: android.sensor.accelerometer /Type_number: 1
+2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: LIS2MDL Magnetometer Sensor /Type_String: android.sensor.magnetic_field /Type_number: 2
+2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: LIS2MDL Magnetometer Sensor (wake-up) /Type_String: android.sensor.magnetic_field /Type_number: 2
+2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: Orientation Sensor /Type_String: android.sensor.orientation /Type_number: 3
+2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: Orientation Sensor (wake-up) /Type_String: android.sensor.orientation /Type_number: 3
+2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Gyroscope /Type_String: android.sensor.gyroscope /Type_number: 4
+2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Gyroscope (wake-up) /Type_String: android.sensor.gyroscope /Type_number: 4
+2023-05-03 12:07:04.464 15354-15354 List sensors            com.uqac.testing                     D  Name: TCS3701 light sensor /Type_String: android.sensor.light /Type_number: 5
+2023-05-03 12:07:04.465 15354-15354 List sensors            com.uqac.testing                     D  Name: TCS3701 light sensor (wake-up) /Type_String: android.sensor.light /Type_number: 5
+2023-05-03 12:07:04.465 15354-15354 List sensors            com.uqac.testing                     D  Name: LPS27HHW Pressure Sensor /Type_String: android.sensor.pressure /Type_number: 6
+2023-05-03 12:07:04.465 15354-15354 List sensors            com.uqac.testing                     D  Name: LPS27HHW Pressure Sensor (wake-up) /Type_String: android.sensor.pressure /Type_number: 6
+2023-05-03 12:07:04.465 15354-15354 List sensors            com.uqac.testing                     D  Name: Gravity Sensor /Type_String: android.sensor.gravity /Type_number: 9
+2023-05-03 12:07:04.465 15354-15354 List sensors            com.uqac.testing                     D  Name: Gravity Sensor (wake-up) /Type_String: android.sensor.gravity /Type_number: 9
+2023-05-03 12:07:04.465 15354-15354 List sensors            com.uqac.testing                     D  Name: Linear Acceleration Sensor /Type_String: android.sensor.linear_acceleration /Type_number: 10
+2023-05-03 12:07:04.466 15354-15354 List sensors            com.uqac.testing                     D  Name: Linear Acceleration Sensor (wake-up) /Type_String: android.sensor.linear_acceleration /Type_number: 10
+2023-05-03 12:07:04.466 15354-15354 List sensors            com.uqac.testing                     D  Name: Rotation Vector Sensor /Type_String: android.sensor.rotation_vector /Type_number: 11
+2023-05-03 12:07:04.467 15354-15354 List sensors            com.uqac.testing                     D  Name: Rotation Vector Sensor (wake-up) /Type_String: android.sensor.rotation_vector /Type_number: 11
+2023-05-03 12:07:04.467 15354-15354 List sensors            com.uqac.testing                     D  Name: LIS2MDL Magnetometer Sensor-Uncalibrated /Type_String: android.sensor.magnetic_field_uncalibrated /Type_number: 14
+2023-05-03 12:07:04.467 15354-15354 List sensors            com.uqac.testing                     D  Name: LIS2MDL Magnetometer Sensor-Uncalibrated (wake-up) /Type_String: android.sensor.magnetic_field_uncalibrated /Type_number: 14
+2023-05-03 12:07:04.467 15354-15354 List sensors            com.uqac.testing                     D  Name: Game Rotation Vector Sensor /Type_String: android.sensor.game_rotation_vector /Type_number: 15
+2023-05-03 12:07:04.467 15354-15354 List sensors            com.uqac.testing                     D  Name: Game Rotation Vector Sensor (wake-up) /Type_String: android.sensor.game_rotation_vector /Type_number: 15
+2023-05-03 12:07:04.467 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Gyroscope-Uncalibrated /Type_String: android.sensor.gyroscope_uncalibrated /Type_number: 16
+2023-05-03 12:07:04.467 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Gyroscope-Uncalibrated (wake-up) /Type_String: android.sensor.gyroscope_uncalibrated /Type_number: 16
+2023-05-03 12:07:04.468 15354-15354 List sensors            com.uqac.testing                     D  Name: Step Detector /Type_String: android.sensor.step_detector /Type_number: 18
+2023-05-03 12:07:04.468 15354-15354 List sensors            com.uqac.testing                     D  Name: Step Detector (wake-up) /Type_String: android.sensor.step_detector /Type_number: 18
+2023-05-03 12:07:04.468 15354-15354 List sensors            com.uqac.testing                     D  Name: Step Counter /Type_String: android.sensor.step_counter /Type_number: 19
+2023-05-03 12:07:04.468 15354-15354 List sensors            com.uqac.testing                     D  Name: Step Counter (wake-up) /Type_String: android.sensor.step_counter /Type_number: 19
+2023-05-03 12:07:04.468 15354-15354 List sensors            com.uqac.testing                     D  Name: Geomagnetic Rotation Vector Sensor /Type_String: android.sensor.geomagnetic_rotation_vector /Type_number: 20
+2023-05-03 12:07:04.468 15354-15354 List sensors            com.uqac.testing                     D  Name: Geomagnetic Rotation Vector Sensor (wake-up) /Type_String: android.sensor.geomagnetic_rotation_vector /Type_number: 20
+2023-05-03 12:07:04.468 15354-15354 List sensors            com.uqac.testing                     D  Name: HeartRate /Type_String: android.sensor.heart_rate /Type_number: 21
+2023-05-03 12:07:04.468 15354-15354 List sensors            com.uqac.testing                     D  Name: HeartRate (wake-up) /Type_String: android.sensor.heart_rate /Type_number: 21
+2023-05-03 12:07:04.469 15354-15354 List sensors            com.uqac.testing                     D  Name: TiltToWake /Type_String: android.sensor.wrist_tilt_gesture /Type_number: 26
+2023-05-03 12:07:04.469 15354-15354 List sensors            com.uqac.testing                     D  Name: TiltToWake (wake-up) /Type_String: android.sensor.wrist_tilt_gesture /Type_number: 26
+2023-05-03 12:07:04.469 15354-15354 List sensors            com.uqac.testing                     D  Name: Stationary Sensor /Type_String: android.sensor.stationary_detect /Type_number: 29
+2023-05-03 12:07:04.469 15354-15354 List sensors            com.uqac.testing                     D  Name: Stationary Sensor (wake-up) /Type_String: android.sensor.stationary_detect /Type_number: 29
+2023-05-03 12:07:04.469 15354-15354 List sensors            com.uqac.testing                     D  Name: Instant Motion Sensor /Type_String: android.sensor.motion_detect /Type_number: 30
+2023-05-03 12:07:04.469 15354-15354 List sensors            com.uqac.testing                     D  Name: Instant Motion Sensor (wake-up) /Type_String: android.sensor.motion_detect /Type_number: 30
+2023-05-03 12:07:04.469 15354-15354 List sensors            com.uqac.testing                     D  Name: Low latency off body detect /Type_String: android.sensor.low_latency_offbody_detect /Type_number: 34
+2023-05-03 12:07:04.470 15354-15354 List sensors            com.uqac.testing                     D  Name: Low latency off body detect (wake-up) /Type_String: android.sensor.low_latency_offbody_detect /Type_number: 34
+2023-05-03 12:07:04.470 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Accelerometer-Uncalibrated /Type_String: android.sensor.accelerometer_uncalibrated /Type_number: 35
+2023-05-03 12:07:04.470 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Accelerometer-Uncalibrated (wake-up) /Type_String: android.sensor.accelerometer_uncalibrated /Type_number: 35
+2023-05-03 12:07:04.470 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Temperature /Type_String: com.google.sensor.gyro_temperature /Type_number: 65538
+2023-05-03 12:07:04.470 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Temperature (wake-up) /Type_String: com.google.sensor.gyro_temperature /Type_number: 65538
+2023-05-03 12:07:04.470 15354-15354 List sensors            com.uqac.testing                     D  Name: LPS27HHW Temperature Sensor /Type_String: com.google.sensor.pressure_temp /Type_number: 65539
+2023-05-03 12:07:04.470 15354-15354 List sensors            com.uqac.testing                     D  Name: LPS27HHW Temperature Sensor (wake-up) /Type_String: com.google.sensor.pressure_temp /Type_number: 65539
+2023-05-03 12:07:04.471 15354-15354 List sensors            com.uqac.testing                     D  Name: LIS2MDL Temperature Sensor /Type_String: com.google.sensor.magnetometer_temp /Type_number: 65540
+2023-05-03 12:07:04.471 15354-15354 List sensors            com.uqac.testing                     D  Name: LIS2MDL Temperature Sensor (wake-up) /Type_String: com.google.sensor.magnetometer_temp /Type_number: 65540
+2023-05-03 12:07:04.471 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Accelerometer /Type_String: com.google.sensor.dummy_accel /Type_number: 65547
+2023-05-03 12:07:04.471 15354-15354 List sensors            com.uqac.testing                     D  Name: LSM6DSO32 Accelerometer (wake-up) /Type_String: com.google.sensor.dummy_accel /Type_number: 65547
+2023-05-03 12:07:04.471 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 PPG Controller /Type_String: com.google.sensor.ppg_controller /Type_number: 65549
+2023-05-03 12:07:04.471 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 PPG Controller (wake-up) /Type_String: com.google.sensor.ppg_controller /Type_number: 65549
+2023-05-03 12:07:04.471 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 ECG Sensor /Type_String: com.google.sensor.ecg /Type_number: 65550
+2023-05-03 12:07:04.471 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 ECG Sensor (wake-up) /Type_String: com.google.sensor.ecg /Type_number: 65550
+2023-05-03 12:07:04.472 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 ECG Lead Detector /Type_String: com.google.sensor.ecg_lead_detector /Type_number: 65551
+2023-05-03 12:07:04.472 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 ECG Lead Detector (wake-up) /Type_String: com.google.sensor.ecg_lead_detector /Type_number: 65551
+2023-05-03 12:07:04.472 15354-15354 List sensors            com.uqac.testing                     D  Name: GazeSensor /Type_String: com.google.sensor.gaze_gesture /Type_number: 65553
+2023-05-03 12:07:04.472 15354-15354 List sensors            com.uqac.testing                     D  Name: GazeSensor (wake-up) /Type_String: com.google.sensor.gaze_gesture /Type_number: 65553
+2023-05-03 12:07:04.472 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 Galvanic Skin Response /Type_String: com.google.sensor.gsr /Type_number: 65554
+2023-05-03 12:07:04.472 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 Galvanic Skin Response (wake-up) /Type_String: com.google.sensor.gsr /Type_number: 65554
+2023-05-03 12:07:04.472 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 PPG Sensor /Type_String: com.google.wear.sensor.ppg /Type_number: 65572
+2023-05-03 12:07:04.472 15354-15354 List sensors            com.uqac.testing                     D  Name: AFE4950 PPG Sensor (wake-up) /Type_String: com.google.wear.sensor.ppg /Type_number: 65572
+2023-05-03 12:07:04.473 15354-15354 List sensors            com.uqac.testing                     D  Name: HeartRate-Extended /Type_String: com.google.sensor.heart_rate_extended /Type_number: 131086
+2023-05-03 12:07:04.473 15354-15354 List sensors            com.uqac.testing                     D  Name: HeartRate-Extended (wake-up) /Type_String: com.google.sensor.heart_rate_extended /Type_number: 131086
+2023-05-03 12:07:04.473 15354-15354 List sensors            com.uqac.testing                     D  Name: Step Cadence /Type_String: com.google.sensor.step_cadence /Type_number: 131087
+2023-05-03 12:07:04.473 15354-15354 List sensors            com.uqac.testing                     D  Name: Step Cadence (wake-up) /Type_String: com.google.sensor.step_cadence /Type_number: 131087
+                        </code>
+                    </pre>
+                </div>
 
             </div>
 
