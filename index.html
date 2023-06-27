@@ -32,6 +32,7 @@
         .bold {
             font-weight: bolder;
         }
+
         .code-box {
             background-color: #2b2b2b;
             /* Couleur de fond foncée */
@@ -43,11 +44,26 @@
             height: 200px;
             overflow: auto;
         }
+
         .code-header {
-            background-color: #333; /* Couleur de fond de la barre de titre */
-            color: #fff; /* Couleur du texte de la barre de titre */
+            background-color: #333;
+            /* Couleur de fond de la barre de titre */
+            color: #fff;
+            /* Couleur du texte de la barre de titre */
             padding: 10px;
             font-weight: bold;
+        }
+
+        a {
+            color: black;
+            /* Couleur par défaut des liens non visités */
+        }
+
+        a:visited {
+            color: black;
+            /* Couleur des liens visités */
+            text-decoration: none;
+            /* Enlève le soulignement des liens visités */
         }
     </style>
 
@@ -97,10 +113,8 @@
                     <a href="./ppg.html#ppg">
                         <li class="list-group-item bold">Capteur PPG</li>
                     </a>
-                    <li>
-
-                        <a href="./ppg.html#fonctionnement">
-                    <li class="list-group-item">&emsp;&emsp;&emsp;Fonctionnement</li>
+                    <a href="./ppg.html#fonctionnement">
+                        <li class="list-group-item">&emsp;&emsp;&emsp;Fonctionnement</li>
                     </a>
                     <a href="./ppg.html#acquisition">
                         <li class="list-group-item">&emsp;&emsp;&emsp;Acquisition des données</li>
@@ -108,15 +122,12 @@
                     <a href="./ppg.html#analyse">
                         <li class="list-group-item">&emsp;&emsp;&emsp;Analyse des données</li>
                     </a>
-
-                    </li>
                     <a href="./galvanic.html#galvanic">
                         <li class="list-group-item bold">Capteur Galvanic</li>
                     </a>
-                    <li>
 
-                        <a href="./galvanic.html#fonctionnement">
-                    <li class="list-group-item">&emsp;&emsp;&emsp;Fonctionnement</li>
+                    <a href="./galvanic.html#fonctionnement">
+                        <li class="list-group-item">&emsp;&emsp;&emsp;Fonctionnement</li>
                     </a>
                     <a href="./galvanic.html#acquisision">
                         <li class="list-group-item">&emsp;&emsp;&emsp;Acquisition des données</li>
@@ -125,7 +136,6 @@
                         <li class="list-group-item">&emsp;&emsp;&emsp;Analyse des données</li>
                     </a>
 
-                    </li>
                 </ul>
             </div>
         </div>
