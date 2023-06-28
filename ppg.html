@@ -204,33 +204,34 @@
                 <h5 id="analyse">Analyse des données</h5>
                 <br>
                 <p>Selon le chipset utilisé (AFE4950 de chez Texas Instrument), une ou plusieurs valeurs peuvent être
-                    renvoyé. Dans
-                    le cadre de la Pixel Watch, c’est un tableau de 16 valeurs qui est renvoyé. Sur une montre de marque
-                    différente
-                    (eg. La fossil, uniquement la valeur traité).</p>
+                    renvoyé. Dans le cadre de la Pixel Watch, c’est un tableau de 7 valeurs qui est renvoyé. Sur une
+                    montre de marque différente (eg. La fossil) seule la valeur traitée est renvoyée.</p>
 
                 <img class="mx-auto p-2" src="./ressources/Image1.png" />
 
-                <p>Sur les 16 valeurs, on peut émettre différentes hypothèses quant à la signification des valeurs. En
-                    effet, Google
-                    étant très opaque sur ce sujet, au cours de nombreux test nous avons déduit que chaque colonne
-                    pouvait faire
-                    référence, au TimeStamp en millisecondes pour la première colonne, au délai d’acquisition pour la
-                    seconde (temps
-                    depuis la première acquisition), en seconde . On peut également trouver la valeur du capteur de
-                    lumière ambiante
-                    en 3ème position, qui est assez utile pour le traitement de signal. Les colonnes 6 et 7 devrait
-                    correspondre au
-                    signal de chaque canal, du fait de leur similarité.</p>
-
-                <p>La valeur permettant d’indiquer le signal traité, du capteur de PPG est la dernière qui n’est pas
-                    égale à 0.
-                    Elle nous permet d’obtenir le graphique suivant :</p>
-
-
+                <p>Dans l'image, en plus des 7 valeurs mentionnées, nous avons ajouté le "timestamp", qui indique la
+                    date à laquelle les données ont été collectées, ainsi qu'une valeur de "délai" qui représente la
+                    durée entre deux récupérations de données.<br>
+                    Concernant les 7 valeurs elles-mêmes, il existe plusieurs hypothèses quant à leur signification, car
+                    Google n'a pas fourni d'informations détaillées à ce sujet. À travers de nombreux tests, nous avons
+                    dû déduire la signification de chaque colonne. Selon nos observations, la première colonne semble
+                    représenter la luminosité ambiante sur la face cachée de la montre. La deuxième colonne pourrait
+                    être liée à la variabilité du signal.<br>
+                    Les colonnes 3 et 6 semblent correspondre à la puissance du signal pour chacun des deux canaux,
+                    tandis que les colonnes 4 et 5 pourraient représenter les valeurs récupérées par chacun des deux
+                    canaux. Enfin, la dernière colonne est la plus importante, car elle contient la valeur du signal
+                    traité qui nous intéresse particulièrement.<br>
+                    Les valeurs obtenues dans cette dernière colonne nous fournissent le signal suivant : <br>
+                </p>
                 <img class="mx-auto p-2" src="./ressources/Image2.png" />
 
-                <p>On notera des variations du signal verticale en raison des mouvements de l’invidu portant la montre.
+                <p>On notera des variations du signal verticale en raison des mouvements de l’individu portant la
+                    montre.<br>
+                    Il est important de noter que ces interprétations sont basées sur nos propres observations et
+                    déductions, et qu'elles peuvent ne pas correspondre exactement à la signification réelle des valeurs
+                    dans le contexte du signal mesuré. Des informations supplémentaires fournies par Google ou une
+                    documentation plus détaillée seraient nécessaires pour confirmer ces interprétations de manière
+                    définitive.<br>
                 </p>
                 <br>
                 <br>
