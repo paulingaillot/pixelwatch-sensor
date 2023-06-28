@@ -28,6 +28,52 @@
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
 
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        .bold {
+            font-weight: bolder;
+        }
+
+        .code-box {
+            background-color: #2b2b2b;
+            /* Couleur de fond foncée */
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            color: #fff;
+            /* Couleur du texte clair */
+            height: 200px;
+            overflow: auto;
+            border-radius: 5px;
+        }
+
+        .code-header {
+            border-radius: 5px;
+            background-color: #333;
+            /* Couleur de fond de la barre de titre */
+            color: #fff;
+            /* Couleur du texte de la barre de titre */
+            padding: 3px;
+            font-weight: bold;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            /* Couleur par défaut des liens non visités */
+        }
+
+        a:visited {
+            color: black;
+            /* Couleur des liens visités */
+            text-decoration: none;
+            /* Enlève le soulignement des liens visités */
+        }
+    </style>
+
 </head>
 
 <body id="body1" data-bs-theme="light">
@@ -60,53 +106,86 @@
         <hr>
     </div>
 
-    <h2>Acquisition de donnée capteurs d’une Pixel Watch</h2>
+    <div class="">
 
-    <ul class="list-group">
-        <a href="galvanic"><li class="list-group-item">Capteur Galvanic</li></a>
-        <li>
-            <ul class="list-group">
-                <a href="#fonctionnement"><li class="list-group-item">&emsp;Fonctionnement</li></a>
-                <a href="#acquisision"><li class="list-group-item">&emsp;Acquisition des données</li></a>
-                <a href="#analyse"><li class="list-group-item">&emsp;Analyse des données</li></a>
-            </ul>
-        </li>
-    </ul>
+        <div class="row">
+            <div class="col-md-5 offset-md-1">
+                <h2>Acquisition de donnée capteurs d’une Pixel Watch</h2>
+            </div>
+        </div>
 
-    <br>
+        <br>
 
-    <h4 id="galvanic">Catpeur Galvanic</h4>
+        <div class="row">
+            <div class="col-md-5 offset-md-1">
+                <ul class="list-group">
+                    <a href="./galvanic.html#galvanic">
+                        <li class="list-group-item bold">Capteur Galvanic</li>
+                    </a>
 
-    <p>Ce capteur permet de mesure la conductance de la peau, ce qui permet de connaitre l’état de sudation d’un
-        individu, ce qui peut être analysé pour connaitre l’état de stress/d’excitation d’un individu.</p>
+                    <a href="./galvanic.html#fonctionnement">
+                        <li class="list-group-item">&emsp;&emsp;&emsp;Fonctionnement</li>
+                    </a>
+                    <a href="./galvanic.html#acquisision">
+                        <li class="list-group-item">&emsp;&emsp;&emsp;Acquisition des données</li>
+                    </a>
+                    <a href="./galvanic.html#analyse">
+                        <li class="list-group-item">&emsp;&emsp;&emsp;Analyse des données</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
 
-    <h5 id="fonctionnement">Fonctionement</h5>
+        <br>
 
-    <p>Deux électrodes sont placées sous la montre, et sont donc en contact avec la peau. On applique à ces dernières
-        une légère tension (insensible pour le porteur), ce qui permet de récupérer la conductance de la peau. Plus
-        l’individu transpire, plus la conductance sera élevée ce qui suite à traitement permettra d’évaluer
-        l’activité/l’état de l’individu. </p>
+        <div class="row">
+            <div class="col-md-5 offset-md-1">
+                <h4 id="galvanic">Catpeur Galvanic</h4>
 
-    <p>NB : Le capteur de réponse galvanique, gagne tout son intérêt lorsqu’il est combiné à d’autre capteurs. En effet,
-        la sudation dépend du contexte, si je suis en train de faire, du sport, ou que je stresse pour un exam, j’aurai
-        la même conductance, mais mon état émotionnel ne sera pas le même.</p>
+                <p>Ce capteur permet de mesure la conductance de la peau, ce qui permet de connaitre l’état de sudation
+                    d’un
+                    individu, ce qui peut être analysé pour connaitre l’état de stress/d’excitation d’un individu.</p>
+
+                <h5 id="fonctionnement">Fonctionement</h5>
+
+                <p>Deux électrodes sont placées sous la montre, et sont donc en contact avec la peau. On applique à ces
+                    dernières
+                    une légère tension (insensible pour le porteur), ce qui permet de récupérer la conductance de la
+                    peau. Plus
+                    l’individu transpire, plus la conductance sera élevée ce qui suite à traitement permettra d’évaluer
+                    l’activité/l’état de l’individu. </p>
+
+                <p>NB : Le capteur de réponse galvanique, gagne tout son intérêt lorsqu’il est combiné à d’autre
+                    capteurs. En effet,
+                    la sudation dépend du contexte, si je suis en train de faire, du sport, ou que je stresse pour un
+                    exam, j’aurai
+                    la même conductance, mais mon état émotionnel ne sera pas le même.</p>
 
 
-    <h5 id="acquisition">Acquisition des données</h5>
+                <h5 id="acquisition">Acquisition des données</h5>
 
-    <ul>
-        <li>Fonctionnement avec des listener</li>
-        <li>Capture des données impossible en simultanée avec le capteur de PPG</li>
-    </ul>
+                <ul>
+                    <li>Fonctionnement avec des listener</li>
+                    <li>Capture des données impossible en simultanée avec le capteur de PPG</li>
+                </ul>
 
-    <h5 id="analyse">Analyse des données</h5>
+                <h5 id="analyse">Analyse des données</h5>
 
-    <img src="./ressources/Image3.png" />
+                <img src="./ressources/Image3.png" />
 
-    <p>Dans ce cas-là, prise de donnée sur 6 min dans un état dis de repos, c’est-à-dire sans sudation particulière. On
-        suppose que la valeur renvoyée du capteur est la tension récupérer entre les 2 électrode</p>
+                <p>Dans ce cas-là, prise de donnée sur 6 min dans un état dis de repos, c’est-à-dire sans sudation
+                    particulière. On
+                    suppose que la valeur renvoyée du capteur est la tension récupérer entre les 2 électrode</p>
 
-    <p>A Venir : effectuer des tests en activités sportives pour comparer les graphique, idem pour le capteur de PPG</p>
+                <p>A Venir : effectuer des tests en activités sportives pour comparer les graphique, idem pour le
+                    capteur de PPG</p>
+                    <br>
+                    <br>
+                    <br>
+            </div>
+        </div>
+
+    </div>
 
     <ul class="nav navbar-expand-lg bg-body-tertiary justify-content-center fixed-bottom">
         <li class="nav-item">
