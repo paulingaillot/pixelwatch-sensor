@@ -139,29 +139,67 @@
             <div class="col-md-9 offset-md-1">
                 <h4 id="ppg">Capteur PPG</h4>
                 <br>
-                <p>Un capteur de PPG (Photopléthysmographie), également connu sous le nom de Photoplethysmography en anglais, est un dispositif utilisé pour mesurer les variations de volume sanguin. <br>
-                    Le capteur de PPG peut être intégré dans différents appareils, tels que les montres connectées, les bracelets d'activité ou les oxymètres de pouls. Il permet de surveiller en temps réel le rythme cardiaque, l'activité physique et d'autres indicateurs de santé, offrant ainsi des fonctionnalités de suivi et d'analyse pour les utilisateurs.<br>
-                    Dans le cas de la Pixel Watch, ce capteur est équipé de deux canaux différents : un premier émettant une lumière verte et un second émettant une lumière rouge, offrant ainsi une meilleure précision. De plus, le capteur est accompagné d'un capteur de lumière ambiante positionné sur le côté en contact avec la peau de la montre, ce qui permet de recueillir les données nécessaires pour le traitement ultérieur.<br>
-                    </p>
+                <p>Un capteur de PPG (Photopléthysmographie), également connu sous le nom de Photoplethysmography en
+                    anglais, est un dispositif utilisé pour mesurer les variations de volume sanguin. <br>
+                    Le capteur de PPG peut être intégré dans différents appareils, tels que les montres connectées, les
+                    bracelets d'activité ou les oxymètres de pouls. Il permet de surveiller en temps réel le rythme
+                    cardiaque, l'activité physique et d'autres indicateurs de santé, offrant ainsi des fonctionnalités
+                    de suivi et d'analyse pour les utilisateurs.<br>
+                    Dans le cas de la Pixel Watch, ce capteur est équipé de deux canaux différents : un premier émettant
+                    une lumière verte et un second émettant une lumière rouge, offrant ainsi une meilleure précision. De
+                    plus, le capteur est accompagné d'un capteur de lumière ambiante positionné sur le côté en contact
+                    avec la peau de la montre, ce qui permet de recueillir les données nécessaires pour le traitement
+                    ultérieur.<br>
+                </p>
 
                 <h5 id="fonctionnement">Fonctionnement</h5>
                 <br>
-                <p>Lorsque la lumière émise par le capteur de PPG traverse la peau, elle est partiellement absorbée par le sang circulant dans les vaisseaux sanguins situés à proximité. Le sang contient de l'hémoglobine, qui absorbe la lumière à certaines longueurs d'onde spécifiques. Les variations de volume sanguin causées par les battements cardiaques entraînent des changements dans l'absorption de la lumière par l'hémoglobine.<br>
-                    Le capteur de PPG mesure ces variations d'absorption de la lumière et les convertit en une série de valeurs. En analysant ces valeurs au fil du temps, il est possible de reconstruire le profil temporel du volume sanguin pulsatile, ce qui permet de calculer la fréquence cardiaque.<br>
-                    En d'autres termes, le capteur de PPG détecte les changements de l'intensité lumineuse réfléchie ou transmise à travers la peau, qui sont directement liés aux variations de volume sanguin causées par les battements cardiaques. Ces variations sont ensuite interprétées et traduites en une fréquence cardiaque mesurée.<br>
-                    Il convient de noter que le capteur de PPG peut également fournir d'autres informations, telles que des données sur la variabilité du rythme cardiaque, l'oxygénation du sang et l'évaluation de la qualité du signal PPG. Cependant, la précision de ces mesures peut varier en fonction de la qualité du capteur, des conditions environnementales et de l'activité physique de l'individu.<br>
-                    </p>
+                <p>Lorsque la lumière émise par le capteur de PPG traverse la peau, elle est partiellement absorbée par
+                    le sang circulant dans les vaisseaux sanguins situés à proximité. Le sang contient de l'hémoglobine,
+                    qui absorbe la lumière à certaines longueurs d'onde spécifiques. Les variations de volume sanguin
+                    causées par les battements cardiaques entraînent des changements dans l'absorption de la lumière par
+                    l'hémoglobine.<br>
+                    Le capteur de PPG mesure ces variations d'absorption de la lumière et les convertit en une série de
+                    valeurs. En analysant ces valeurs au fil du temps, il est possible de reconstruire le profil
+                    temporel du volume sanguin pulsatile, ce qui permet de calculer la fréquence cardiaque.<br>
+                    En d'autres termes, le capteur de PPG détecte les changements de l'intensité lumineuse réfléchie ou
+                    transmise à travers la peau, qui sont directement liés aux variations de volume sanguin causées par
+                    les battements cardiaques. Ces variations sont ensuite interprétées et traduites en une fréquence
+                    cardiaque mesurée.<br>
+                    Il convient de noter que le capteur de PPG peut également fournir d'autres informations, telles que
+                    des données sur la variabilité du rythme cardiaque, l'oxygénation du sang et l'évaluation de la
+                    qualité du signal PPG. Cependant, la précision de ces mesures peut varier en fonction de la qualité
+                    du capteur, des conditions environnementales et de l'activité physique de l'individu.<br>
+                </p>
 
                 <h5 id="acquisition">Acquisition des données</h5>
                 <br>
+                <p>
+                    Pour récupérer les données d’un capteur sur Android, nous avons utilisé un SensorListener qui va
+                    permettre d’écouter le capteur voulu à une fréquence définit. (voir repo associé)
+                    Dans le cadre de la montre Google Pixel Watch nous avons pu récolter différentes données de ce
+                    capteur. En effet a chaque itération le capteur nous renvoi un tableau de 7 entrées (+timestamp) ,
+                    contenant les valeurs suivantes :<br></p>
                 <ul>
-                    <li>
-                        Fonctionnement avec des listenener
+                    <li>Nous avons tout d’abords le timestamp indiquant la date à laquelle les données ont été récoltés
+                    </li>
+                    <li>Dans la première colonne des données récupérés nous avons la valeur de lumière ambiante
+                        indiquant la luminosité sur la face arrière de la montre</li>
+                    <li>La deuxième colonne nous indique la variabilité du signal récupéré</li>
+                    <li>La troisième colonne nous indique la puissance du signal émis sur le canal 1</li>
+                    <li>La quatrième colonne nous indique la valeur récupérée par le canal 1</li>
+                    <li>La cinquième colonne nous indique la valeur récupérée par le canal 2</li>
+                    <li>La sixième colonne nous indique la puissance du signal émis par le canal 2</li>
+                    <li>Enfin la septième colonne nous renvoi la valeur du signal traité en fonction des valeurs des
+                        deux canaux et de la valeur de luminosité ambiante.</li>
                 </ul>
-                <li>
-                    La fréquence d’acquisition ne peut être supérieur à 100Hz
-                </li>
-                </ul>
+                <p>Grace a ce capteur il est également possible de savoir si la montre est portée par l’utilisateur
+                    puisque la lumière ambiante sera anormalement élevée si l’utilisateur ne porte pas la montre. De
+                    plus le canal 2 ne sera alors plus actif et renverra toujours comme valeur par défaut 0.</p>
+                <p> Ce capteur étant énergivore la fréquence maximale a laquelle il peut être exécuté ne peut pas
+                    dépasser les 25Hz et ce même avec des autorisations spéciales alors que sur d’autres modèles tels
+                    que la montre Fossil, le capteur de PPG peut être poussé jusqu’à 100Hz.</p>
+
 
                 <h5 id="analyse">Analyse des données</h5>
                 <br>
