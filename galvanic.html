@@ -117,7 +117,7 @@
         <br>
 
         <div class="row">
-            <div class="col-md-5 offset-md-1">
+            <div class="col-md-5 offset-md-2">
                 <ul class="list-group">
                     <a href="./galvanic.html#galvanic">
                         <li class="list-group-item bold">Capteur Galvanic</li>
@@ -140,7 +140,7 @@
         <br>
 
         <div class="row">
-            <div class="col-md-5 offset-md-1">
+            <div class="col-md-9 offset-md-1">
                 <h4 id="galvanic">Catpeur Galvanic</h4>
                 <br>
 
@@ -150,31 +150,73 @@
 
                 <h5 id="fonctionnement">Fonctionement</h5>
                 <br>
-                
-                <p>Deux électrodes sont placées sous la montre, et sont donc en contact avec la peau. On applique à ces
-                    dernières
-                    une légère tension (insensible pour le porteur), ce qui permet de récupérer la conductance de la
-                    peau. Plus
-                    l’individu transpire, plus la conductance sera élevée ce qui suite à traitement permettra d’évaluer
-                    l’activité/l’état de l’individu. </p>
 
-                <p>NB : Le capteur de réponse galvanique, gagne tout son intérêt lorsqu’il est combiné à d’autre
-                    capteurs. En effet,
-                    la sudation dépend du contexte, si je suis en train de faire, du sport, ou que je stresse pour un
-                    exam, j’aurai
-                    la même conductance, mais mon état émotionnel ne sera pas le même.</p>
+                <p>Pour la montre Google Pixel Watch, le capteur de réponse galvanique utilise deux électrodes placées
+                    sur la face opposée de la montre en contact avec la peau de l'utilisateur. Lorsque le capteur est
+                    activé, une légère tension électrique est appliquée entre les deux électrodes. Cette tension est
+                    imperceptible pour le porteur.<br>
+                    En mesurant la conductance de la peau à partir de cette tension, le capteur peut évaluer l'état de
+                    l'individu. En effet, lorsque nous transpirons, la conductance cutanée augmente. Ainsi, une
+                    conductance élevée peut indiquer un niveau de stress, d'anxiété ou d'excitation plus élevé.<br>
+                    Cependant, le capteur de réponse galvanique prend tout son sens lorsqu'il est combiné avec d'autres
+                    capteurs. En effet, la sudation dépend du contexte. Par exemple, si vous faites du sport ou si vous
+                    êtes stressé avant un examen, votre conductance cutanée peut être élevée, mais votre état émotionnel
+                    ne sera pas le même dans les deux situations.<br>
+                    En utilisant le capteur de réponse galvanique en conjonction avec d'autres capteurs tels que
+                    l'accéléromètre ou le capteur cardiaque, il devient possible d'obtenir une image plus complète de
+                    l'état émotionnel de l'utilisateur. Ces informations peuvent être utilisées pour détecter le niveau
+                    de stress, mesurer l'excitation ou évaluer les réactions émotionnelles dans différents
+                    scénarios.<br>
+                    Il convient de noter que l'interprétation précise des mesures de conductance cutanée nécessite une
+                    analyse contextuelle et peut être influencée par d'autres facteurs individuels tels que la
+                    température ambiante, l'hydratation de la peau et d'autres variables.<br>
+                </p>
 
 
                 <h5 id="acquisition">Acquisition des données</h5>
                 <br>
-                
-                <ul>
-                    <li>Fonctionnement avec des listener</li>
-                    <li>Capture des données impossible en simultanée avec le capteur de PPG</li>
-                </ul>
+
+                <p>Pour récupérer les données du capteur de réponse galvanique, nous utilisons une application Android
+                    Wear OS avec un sensorListener dédié à ce capteur. Cependant, il est important de noter que la
+                    lecture de ce capteur ne peut pas être effectuée simultanément avec le capteur de PPG. Les deux
+                    capteurs ne peuvent pas fonctionner en même temps, indépendamment des permissions accordées à
+                    l'application.<br>
+                    De plus, tout comme le capteur de PPG, le capteur de réponse galvanique fonctionne à une fréquence
+                    de 25 à 33 Hz. Cela signifie que les mesures sont prises à ces intervalles de temps spécifiques pour
+                    obtenir les données de conductance cutanée.<br>
+                    Contrairement au capteur de PPG, les données récupérées du capteur de réponse galvanique sont
+                    stockées dans une seule colonne. Par conséquent, nous ne récupérons que deux types de données : le
+                    "timestamp" indiquant la date et l'heure de la collecte des données, et une valeur de réponse
+                    galvanique qui varie généralement entre -30000 et -50000. Cette valeur représente la mesure de
+                    conductance cutanée à un instant donné, qui peut être utilisée pour évaluer l'état émotionnel ou les
+                    réactions psychophysiologiques de l'utilisateur. Cette valeur peut varier en fonction du serrage de
+                    la montre au poignet.<br>
+                </p>
 
                 <h5 id="analyse">Analyse des données</h5>
                 <br>
+
+                <p>Dans le graphique des données du capteur de réponse galvanique sur une période de 6 minutes, nous
+                    pouvons observer deux points principaux :</p><br>
+                <ul>
+                    <li>Valeur moyenne de conductance cutanée : Nous remarquons une valeur moyenne qui représente la
+                        conductance moyenne de la peau de l'utilisateur. Cette valeur varie légèrement au fil du temps
+                        mais reste globalement stable. Elle indique le niveau de conductance de base de la peau, qui
+                        peut varier d'une personne à l'autre et refléter des différences individuelles dans la sudation
+                        et la conductivité cutanée.</li>
+                    <li>Pics de stress ou d'attention : Nous observons également des pics dispersés dans le graphique,
+                        qui représentent des moments de stress, d'attention ou des changements émotionnels brusques.
+                        Dans l'exemple donné, ces pics sont générés par des claquements de mains réguliers toutes les 30
+                        secondes. Cependant, il est important de noter que ces pics pourraient également être observés
+                        lorsqu'un utilisateur reçoit une notification importante, interagit dans le monde réel ou fait
+                        face à des événements émotionnellement significatifs. Ces pics de conductance cutanée reflètent
+                        les réponses physiologiques du corps aux stimuli externes ou internes qui suscitent des
+                        réactions émotionnelles.</li>
+                </ul><br>
+                <p>Il convient de souligner que l'interprétation précise des pics de conductance cutanée nécessite une
+                    analyse contextuelle et peut varier d'un individu à l'autre. En effet un même pic de conductance
+                    peut provenir de différents états émotionnels comme nous l’avons vu plus tôt.</p><br>
+
                 <img class="mx-auto p-2" src="./ressources/Image3.png" />
 
                 <p>Dans ce cas-là, prise de donnée sur 6 min dans un état dis de repos, c’est-à-dire sans sudation
@@ -183,9 +225,9 @@
 
                 <p>A Venir : effectuer des tests en activités sportives pour comparer les graphique, idem pour le
                     capteur de PPG</p>
-                    <br>
-                    <br>
-                    <br>
+                <br>
+                <br>
+                <br>
             </div>
         </div>
 
